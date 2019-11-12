@@ -76,17 +76,22 @@ int main(int argc, char** argv) {
     //output fakeArgv
     std::cout << fakeArgv << std::endl;
 
+    //declare integer variable x and initialize it to 10
     int x = 10;
-    int* xPointer = &x;
-    int** xPointerPointer = &xPointer;
+    //assign the memory address of x to pointer
+    int* pointer = &x;
+    //assign pointer to xPointer2
+    int** pointer2 = &xPointer;
 
     std::cout << x << std::endl; //output 10
-    std::cout << *xPointer << std::endl; //output 10
-    std::cout << *(*xPointerPointer) << std::endl; //output 10
+    std::cout << *pointer << std::endl; //output 10
+    std::cout << *(*pointer2) << std::endl; //output 10
 
-    std::cout << xPointer << std::endl;
-    std::cout << *xPointerPointer << std::endl;
-    std::cout << xPointerPointer << std::endl;
+    //output the memory address that pointer points to
+    std::cout << pointer << std::endl;
+    //output the memory address that pointer points to by dereferecing pointer2
+    std::cout << *pointer2 << std::endl;
+    std::cout << pointer2 << std::endl;
 
     return 0;
 }
